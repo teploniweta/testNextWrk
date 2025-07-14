@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { SellerCardProps } from '@/types';
 
 const SellerCard: React.FC<SellerCardProps> = ({ seller }) => {
@@ -41,10 +42,12 @@ const SellerCard: React.FC<SellerCardProps> = ({ seller }) => {
   return (
     <div className="flex items-start space-x-2">
       <div className="relative">
-        <img 
+        <Image 
           src={seller.avatar} 
           alt={seller.nickname}
-          className="w-8 h-8 rounded-full object-cover mt-0"
+          width={32}
+          height={32}
+          className="rounded-full object-cover mt-0"
           onError={(e) => {
             const target = e.target as HTMLImageElement;
             target.src = `https://ui-avatars.com/api/?name=${seller.nickname}&background=6366f1&color=fff&size=32`;
