@@ -183,7 +183,7 @@ export default function GameMarketplace() {
       <Header />
       
       <div className="flex-1 flex justify-center">
-        <div className="w-full max-w-[1256px] responsive-container px-16 py-8">
+        <div className="w-full max-w-[1256px]  px-16 py-8">
           <div className="bg-white rounded-lg shadow-sm">
             <HeroSection
               gameFilters={gameFilters}

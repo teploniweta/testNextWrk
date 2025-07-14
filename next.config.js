@@ -1,6 +1,8 @@
+const isProd = process.env.NODE_ENV === 'production'
+
 const repo = 'testNextWrk'
-const assetPrefix = `https://teploniweta.github.io/${repo}`
-const basePath = `/${repo}`
+const assetPrefix = isProd ? `https://teploniweta.github.io/${repo}` : undefined
+const basePath = isProd ? `/${repo}` : undefined
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -8,10 +10,14 @@ const nextConfig = {
   assetPrefix: assetPrefix,
   basePath: basePath,
   trailingSlash: true,
-  images: {
-    loader: 'custom',
-    loaderFile: './image-loader.js',
-  },
+  images: isProd
+    ? {
+        loader: 'custom',
+        loaderFile: './image-loader.js',
+      }
+    : {
+        unoptimized: true,
+      },
 }
 
 module.exports = nextConfig 
