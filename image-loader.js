@@ -1,12 +1,7 @@
 'use strict'
 
-module.exports = ({ src, width, quality }) => {
-  const isProd = process.env.NODE_ENV === 'production'
+module.exports = ({ src }) => {
   const assetPrefix = 'https://teploniweta.github.io/testNextWrk'
-  
-  if (isProd) {
-    return `${assetPrefix}${src}`
-  }
-  
-  return src
+  // src будет иметь вид /images/foo.png, поэтому мы просто добавляем префикс.
+  return `${assetPrefix}${src}`
 } 
