@@ -1,12 +1,17 @@
+const repo = 'testNextWrk'
+const assetPrefix = `https://teploniweta.github.io/${repo}`
+const basePath = `/${repo}`
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/testNextWrk',
-  assetPrefix: '/testNextWrk',
+  assetPrefix: assetPrefix,
+  basePath: basePath,
   trailingSlash: true,
   images: {
-    unoptimized: true,
+    loader: 'default',
+    path: assetPrefix,
   },
-};
+}
 
-module.exports = nextConfig; 
+module.exports = nextConfig 

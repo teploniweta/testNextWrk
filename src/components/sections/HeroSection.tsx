@@ -39,13 +39,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
         </div>
         <div className="flex-shrink-0">
-          <Image 
-            src="/images/hero_pic.png" 
-            alt="Hero Image" 
-            width={450} 
-            height={450}
-            className="block"
-            style={{ objectFit: 'cover' }}
+          <Image
+            src="/images/hero_pic.png"
+            alt="Description"
+            width={475}
+            height={555}
+            priority
           />
         </div>
       </div>
