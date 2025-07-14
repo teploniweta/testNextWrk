@@ -9,8 +9,8 @@ const nextConfig = {
   basePath: basePath,
   trailingSlash: true,
   images: {
-    loader: 'default',
-    path: assetPrefix,
+    loader: 'custom',
+    loaderFile: './image-loader.js',
   },
 }
 
