@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out -r https://github.com/teploniweta/testNextWrk.git"
+    "deploy": "gh-pages -f -d out -r https://github.com/teploniweta/testNextWrk.git"
   },
   "dependencies": {
     "next": "14.0.0",
